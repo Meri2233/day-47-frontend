@@ -24,6 +24,7 @@ axiosClient.interceptors.response.use((res) => {
         return Promise.reject(err);
     }
     if (statusCode === 401) {
+        console.log("Generating accessToken")
         const tokenResponse = await axiosClient.post('auth/token', {
             token: localStorage.getItem('refresh_token')
         });

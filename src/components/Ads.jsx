@@ -12,7 +12,7 @@ export default function Ads() {
         catch(error){
             navigate("/login");
         }
-    },[]);
+    });
 
     return (
         <div className='ads'>

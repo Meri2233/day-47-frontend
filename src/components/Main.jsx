@@ -9,16 +9,17 @@ import Sucess from './Sucess'
 
 export default function Main() {
   let token = localStorage.getItem('access_token');
+  console.log(token);
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if (token === null) {
-      navigate('/')
-    }
-    else {
-      navigate("/ads");
-    }
-  }, [])
+  //useEffect(() => {
+   // if (token === null) {
+   //   navigate('/')
+   // }
+   // else {
+   //   navigate("/new");
+   // }
+ // },[]);
 
   return (
     <div className='container'>

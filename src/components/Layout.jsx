@@ -7,14 +7,16 @@ export default function Layout() {
     <div className='layout'>
       <div className="header">
         <h2>BuySell</h2>
-        {token === null ? <Link to="/signup">SignUp/SignIn</Link> :
-          <div className="navbar">
+        {/*token === null ?*/ <Link style={{ textDecoration: 'none' }} to="/signup">SignUp/SignIn</Link>
+          /*<div className="navbar">
             <div className="options">
               <Link to={"/new"}>Post Ad </Link>
             </div>
             <button>Logout</button>
-          </div>
+          </div>*/
         }
+        <Link style={{ textDecoration: 'none' }} to={"/new"}>Post Ad </Link>
+
       </div>
       <Outlet />
     </div>
